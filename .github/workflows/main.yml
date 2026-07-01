@@ -1,18 +1,15 @@
-name: CI Pipeline
+name: CI
 
 on:
   push:
-    branches:
-      - main
-      - master
-      - develop
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-
+      - name: Run a script
+        run: echo "Workflow triggered on push!"
